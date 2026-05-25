@@ -20,13 +20,15 @@ header {
     background-color: #272a2f;
     padding: 20px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-left {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
 .header-left img {
@@ -52,11 +54,12 @@ header {
 .menu-sort a {
     padding: 8px 16px;
     border: 1px solid rgba(255, 255, 255, 0.226);
-    border-radius: 8px;
     color: #ffffff;
     text-decoration: none;
     transition: all 0.2s;
-    font-size: 0.95rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .menu-main a:hover,
@@ -69,8 +72,8 @@ header {
 .menu-sort a.active {
     background-color: #e45b5b;
     border-color: #e45b5b;
-    color: #ffffff;
-    font-weight: 600;
+    color: #4c0000;
+    border: 1px solid transparent;
 }
 
 .menu-sort {
@@ -83,7 +86,6 @@ header {
 }
 
 .menu-sort a {
-    font-size: 0.9rem;
     padding: 6px 12px;
 }
 
@@ -96,14 +98,13 @@ main {
 .form-container,
 .viewer-container {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 28px auto 0 auto;
 }
 
 /* ===== FORM ===== */
 .contact-form {
     background: #272a2f;
     border: 1px solid rgba(255, 255, 255, 0.075);
-    border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
 }
@@ -128,12 +129,15 @@ textarea {
     width: 100%;
     padding: 10px 14px;
     border: 1px solid rgba(255, 255, 255, 0.226);
-    border-radius: 8px;
     background-color: #272a2f;
     color: #ffffff;
     font-size: 1rem;
     transition: border-color 0.2s;
     font-family: 'Geologica', sans-serif;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 select {
@@ -212,10 +216,16 @@ textarea {
     opacity: 0.8;
 }
 
+.btn-text {
+    position: relative;
+    z-index: 3;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
 /* ===== MESSAGES ===== */
 .message {
     padding: 15px 20px;
-    border-radius: 8px;
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -273,7 +283,6 @@ textarea {
 .pagination a {
     padding: 8px 12px;
     border: 2px solid rgba(255, 255, 255, 0.226);
-    border-radius: 4px;
     color: #ffffff;
     text-decoration: none;
     transition: all 0.2s;
@@ -293,7 +302,6 @@ textarea {
 .contacts-list {
     background: #272a2f;
     border: 1px solid rgba(255, 255, 255, 0.075);
-    border-radius: 12px;
     padding: 20px;
     margin-bottom: 30px;
 }
@@ -310,7 +318,6 @@ textarea {
     padding: 10px 15px;
     margin-bottom: 8px;
     border: 1px solid rgba(255, 255, 255, 0.226);
-    border-radius: 8px;
     color: #ffffff;
     text-decoration: none;
     transition: all 0.2s;
@@ -332,7 +339,6 @@ textarea {
     padding: 10px 15px;
     margin-bottom: 8px;
     border: 1px solid rgba(255, 255, 255, 0.226);
-    border-radius: 8px;
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
