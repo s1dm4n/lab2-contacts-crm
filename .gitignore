@@ -1,0 +1,5 @@
+# Git ignore file
+.vscode/
+.idea/
+.DS_Store
+*.log

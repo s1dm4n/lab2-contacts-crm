@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: 'Geologica', sans-serif !important;
+}
+
+body {
+    background-color: #272a2f;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #272a2f;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.header-left img {
+    height: 50px;
+}
+
+.header-center {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ===== MENU ===== */
+.menu-main {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.menu-main a,
+.menu-sort a {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.menu-main a:hover,
+.menu-sort a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-main a.active,
+.menu-sort a.active {
+    background-color: #ff4444;
+    border-color: #ff4444;
+    color: #ffffff;
+}
+
+.menu-sort {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    margin-bottom: 0;
+}
+
+.menu-sort a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 40px 30px;
+}
+
+.form-container,
+.viewer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== FORM ===== */
+.contact-form {
+    background: #272a2f;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    border-radius: 8px;
+    background-color: #272a2f;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    background-color: #5a7cff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #4a6ce6;
+}
+
+/* ===== MESSAGES ===== */
+.message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.5);
+    color: #4caf50;
+}
+
+.message.error {
+    background-color: rgba(244, 67, 54, 0.2);
+    border: 1px solid rgba(244, 67, 54, 0.5);
+    color: #f44336;
+}
+
+/* ===== TABLE ===== */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.contacts-table thead {
+    background-color: #1f2225;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.contacts-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.contacts-table td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    color: #ffffff;
+}
+
+.contacts-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    border: 2px solid rgba(255, 255, 255, 0.226);
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.pagination a:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.pagination a.active {
+    background-color: #5a7cff;
+    border-color: #5a7cff;
+}
+
+/* ===== CONTACTS LIST ===== */
+.contacts-list {
+    background: #272a2f;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.contacts-list label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.contacts-list a {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.contacts-list a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contacts-list a.active {
+    background-color: #ff4444;
+    border-color: #ff4444;
+    font-weight: 600;
+}
+
+.contact-link {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.contact-link:hover {
+    background-color: rgba(244, 67, 54, 0.2);
+    border-color: rgba(244, 67, 54, 0.5);
+}
+
+.no-data {
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #272a2f;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
+    padding: 20px 30px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contacts-table {
+        font-size: 0.9rem;
+    }
+    
+    .contacts-table th,
+    .contacts-table td {
+        padding: 8px;
+    }
+    
+    .menu-main {
+        flex-direction: column;
+    }
+    
+    .menu-main a {
+        width: 100%;
+        text-align: center;
+    }
+}
