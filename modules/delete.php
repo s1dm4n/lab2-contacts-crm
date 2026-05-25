@@ -47,7 +47,7 @@ function renderDeleteForm($db) {
         foreach ($contacts as $contact) {
             $html .= '<a href="index.php?page=delete&delete_id=' . $contact['id'] . '" ';
             $html .= 'onclick="return confirm(\'Вы уверены?\');" class="contact-link">';
-            $html .= htmlspecialchars($contact['surname']) . ' ' . htmlspecialchars(substr($contact['name'], 0, 1)) . '.';
+            $html .= htmlspecialchars($contact['surname']) . ' ' . htmlspecialchars($contact['surname']);
             $html .= '</a>';
         }
     }

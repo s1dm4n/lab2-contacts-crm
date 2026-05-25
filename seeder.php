@@ -35,7 +35,7 @@ $contacts = [
 
 // Очищаем существующие записи
 $db->exec('TRUNCATE TABLE contacts');
-echo "🗑️ Таблица очищена.\n";
+echo "Таблица очищена.\n";
 
 // Вставляем записи
 $stmt = $db->prepare('
@@ -57,5 +57,5 @@ foreach ($contacts as $contact) {
     ]);
 }
 
-echo "✅ Добавлено " . count($contacts) . " записей в БД\n";
+echo "Добавлено " . count($contacts) . " записей в БД\n";
 ?>
